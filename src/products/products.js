@@ -1,7 +1,7 @@
 // as imagens não estavam funcionando no github pages chamando dessa forma: image: ["src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"]
 // existem entao 2 possibilidades: 1) import imagem0 from '../assets/soyuz.jpg'  e image: [image0]
 // ou simplesmente mover as imagens pra pasta public e passar o link como image: ["./osirisRex.jpg"] que é o que vou fazer
-// também precisei alterar 2 componentes: imageDetail e 
+// também precisei alterar o componente: imageDetail
 
 export const Produtos = [
     {
@@ -54,7 +54,8 @@ export const Produtos = [
         description: 'Sonda que foi onde??',
         sku: 'sonda-01',
         stock: 1,
-        status: 'in-stock'
+        status: 'in-stock',
+        category: ['Sondas','Americanos']
     },
     {
         id: 5,
@@ -66,7 +67,8 @@ export const Produtos = [
         description: 'Sonda que foi onde??',
         sku: 'sonda-01',
         stock: 1,
-        status: 'in-stock'
+        status: 'in-stock',
+        category: ['Sondas','Americanos']
     },
     {
         id: 6,
@@ -78,7 +80,8 @@ export const Produtos = [
         description: 'Sonda que foi onde??',
         sku: 'sonda-01',
         stock: 1,
-        status: 'in-stock'
+        status: 'in-stock',
+        category: ['Sondas','Americanos']
     },
     {
         id: 7,
@@ -90,7 +93,8 @@ export const Produtos = [
         description: 'Sonda que foi onde??',
         sku: 'sonda-01',
         stock: 1,
-        status: 'in-stock'
+        status: 'in-stock',
+        category: ['Sondas','Americanos']
     },
     {
         id: 8,
@@ -102,7 +106,8 @@ export const Produtos = [
         description: 'Sonda que foi onde??',
         sku: 'sonda-01',
         stock: 1,
-        status: 'in-stock'
+        status: 'in-stock',
+        category: ['Sondas','Americanos']
     },
 
 ]
