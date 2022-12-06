@@ -30,7 +30,7 @@ export const Produtos = [
     {
         id: 3,
         name: "Osiris Rex",
-        image: ["osirisRex.jpg","src/assets/osirisRex.jpg"],
+        image: ["react-ecommerce/osirisRex.jpg","src/assets/osirisRex.jpg"],
         value: 3000.0,
         discount: 0,
         creationDate: new Date('1997-12-17T03:24:00'),
