@@ -43,7 +43,7 @@ const PageCart = () => {
       </CartList>
 
       <CartTotal>
-      <p>Total R${result}</p>
+      <p>Total {(result).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
       <p>Em até 12x de {(result/12).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
       </CartTotal>
       <div className='checkoutButtonArea'>
