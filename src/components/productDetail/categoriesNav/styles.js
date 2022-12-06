@@ -43,7 +43,7 @@ export const Container = styled.div`
         width: 16px;
         height: 16px;
         content: "";
-        background: url('/src/assets/icons8-chevron-right-30.png');
+        background: url('./icons8-chevron-right-30.png');
         background-size:16px 16px;
         margin-top: 4px;
     }
