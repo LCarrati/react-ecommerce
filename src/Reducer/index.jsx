@@ -35,15 +35,16 @@ const cartReducer = (state, action) => { //Função que altera o estado do CART
       return state.map((item) => item.productId == payloadId && (item.amount >= 1)
       ? { ...item, amount: item.amount-- }
       : item)}
-      else{
+      if(!itemExistAndAmount){
         const filtrado = state.filter((item) => item.productId != payloadId)
         return filtrado
       }
+    default:
+      break;
   }
 
 };
 export const CartContext = createContext();
-
 
 export const CartProvider = ({ children }) => {
 
