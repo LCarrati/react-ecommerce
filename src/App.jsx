@@ -1,5 +1,5 @@
 import {
-	// BrowserRouter as Router,
+	// BrowserRouter as Router, //GH_PAGES DO NOT SUPPORT IT
 	HashRouter as Router,
 	Routes,
 	Route

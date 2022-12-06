@@ -1,9 +1,10 @@
+import imagem0 from '../assets/soyuz.jpg'
 
 export const Produtos = [
     {
         id: 1,
         name: "Foguete Soyuz",
-        image: ["src/assets/soyuz.jpg","src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
+        image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         creationDate: new Date('1995-12-17T03:24:00'),
@@ -29,7 +30,7 @@ export const Produtos = [
     {
         id: 3,
         name: "Osiris Rex",
-        image: ["src/assets/osirisRex.jpg"],
+        image: ["/osirisRex.jpg","src/assets/osirisRex.jpg"],
         value: 3000.0,
         discount: 0,
         creationDate: new Date('1997-12-17T03:24:00'),
