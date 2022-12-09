@@ -69,4 +69,7 @@ export const RocketMenuStyle = styled.div`
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ececec;
+    && h4 {
+        cursor: pointer;
+    }
 `

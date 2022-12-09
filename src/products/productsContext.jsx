@@ -2,7 +2,7 @@ import { Produtos } from './products'
 import ProductCard from '../components/productCard'
 import { createContext, useState } from 'react'
 
-export const prodList = Produtos.map((produto) => <ProductCard id={produto.id} name={produto.name} image={produto.image} price={produto.value} discount={produto.discount} key={produto.id} />) //Lista de todos os produtos
+export const prodList = Produtos.map((produto) => <ProductCard id={produto.id} name={produto.name} image={produto.image} price={produto.value} discount={produto.discount} key={produto.id} category={produto.category}/>) //Lista de todos os produtos
 
 export const ListContext = createContext()
 

@@ -25,15 +25,15 @@ const Main = () => {
 
   useEffect(() => {
     if (minMax[0] > 0 && minMax[1] > 0) { //Se o valores de min e max forem diferentes de 0, filtrar a lista de CARDs pelo valor máx e mín
-      setListRender([...prodList].filter((produto) => ((produto.props.price > minMax[0]) && (produto.props.price < minMax[1]))
+      setListRender([...prodList].filter((produto) => ((produto.props.price >= minMax[0]) && (produto.props.price <= minMax[1]))
       ))
     }
     if (minMax[0] == 0) { //Se o valor de min for 0, filtrar a lista de CARDs pelo valor máx
-      setListRender([...prodList].filter((produto) => ((produto.props.price) < minMax[1])
+      setListRender([...prodList].filter((produto) => ((produto.props.price) <= minMax[1])
       ))
     }
     if (minMax[1] == 0) { //Se o valor de max for 0, filtrar a lista de CARDs pelo valor mín
-      setListRender([...prodList].filter((produto) => ((produto.props.price) > minMax[0])
+      setListRender([...prodList].filter((produto) => ((produto.props.price) >= minMax[0])
       ))
     }
   }, [minMax]) //sempre que o estado minMax for alterado

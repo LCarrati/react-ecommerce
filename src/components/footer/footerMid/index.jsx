@@ -12,10 +12,10 @@ const FooterMid = () => {
             <p>(21) 92020-4267</p>  
             <hr />
             <p className='subtitle'>E-mail:</p>
-            <p>contato@magnamix.com.br</p>
+            <p>irmaodojorel@shostners.com</p>
             <hr />
             <p className='subtitle'>Horário de atendimento</p>
-            <p>seg a sex das 09h às 1</p>
+            <p>seg a sex das 09h às 18h</p>
           </div>
           <div>
             <h4>Categorias</h4>

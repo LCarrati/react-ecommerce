@@ -84,7 +84,7 @@ export const Wrapper = styled.div`
         }
     }
     && .buyButtonBorder {
-
+        cursor: pointer;
         border-bottom: 1px solid #eaeaea;
         margin: 20px 0;
         padding-bottom: 20px;
