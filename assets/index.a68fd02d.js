@@ -248,7 +248,6 @@ Error generating stack: `+o.message+`
         }
     }
     && .buyButtonBorder {
-        cursor: pointer;
         border-bottom: 1px solid #eaeaea;
         margin: 20px 0;
         padding-bottom: 20px;
@@ -263,6 +262,7 @@ Error generating stack: `+o.message+`
         font-weight: 700;
         height: 54px;
         width: 100%;
+        cursor: pointer;
     }
 `,D1=[],B1=(e,t)=>{let n=t.payload.productId,r=t.payload.productPrice,i=[...e].find(l=>l.productId==n),o=[...e].find(l=>l.productId==n&&l.amount>1);switch(t.type){case"ADD":if(!i)return[...e,{amount:1,productId:n,productPrice:r}];if(i)return e.map(l=>l.productId==n?{...l,amount:Number(l.amount)+1}:l);case"REMOVE":if(o)return e.map(l=>l.productId==n&&l.amount>=1?{...l,amount:Number(l.amount)-1}:l);if(!o)return e.filter(u=>u.productId!=n)}},sn=N.exports.createContext(),U1=({children:e})=>{const t=i=>JSON.parse(localStorage.getItem("localCart"))||i,[n,r]=N.exports.useReducer(B1,D1,t);return N.exports.useEffect(()=>{localStorage.setItem("localCart",JSON.stringify(n))},[n]),z(sn.Provider,{value:{cart:n,setCart:r},children:[" ",e]})},V1=({name:e,price:t,id:n})=>{const{setCart:r}=N.exports.useContext(sn),i=()=>{r({type:"ADD",payload:{productId:n,productPrice:t}})};return z(F1,{children:[f("h3",{children:e}),z("p",{className:"codSKU",children:["C\xF3digo: ",f("span",{children:n})]}),f("p",{className:"selectOption",children:"Selecione uma op\xE7\xE3o:"}),z("ul",{children:[f("li",{children:f("span",{children:"Opcao 1"})}),f("li",{children:f("span",{children:"Opcao 2"})})]}),z("p",{className:"price",children:["Por ",f("span",{children:t.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})})]}),z("p",{className:"credit",children:["em at\xE9 ",f("span",{children:"12x"})," de ",f("span",{children:(t/12).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})})]}),f("div",{className:"buyButtonBorder",children:f("button",{onClick:i,children:"Comprar"})})]})},H1=K.div`
     display: flex;
