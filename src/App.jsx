@@ -2,19 +2,31 @@ import {
 	// BrowserRouter as Router, //GH_PAGES DO NOT SUPPORT IT
 	HashRouter as Router,
 	Routes,
-	Route
+	Route,
+	useLocation
 } from 'react-router-dom';
+import { useEffect } from 'react';
 import Home from './pages/home'
 import ProductDetail from './pages/productDetail'
 import PageCart from './pages/cart'
 import Header from './components/header';
 import Footer from './components/footer';
 
-function App() {
+const ScrollToTop = (props) => { // peguei esse bloco na documentação 
+	const location = useLocation();
+	useEffect(() => {
+	  window.scrollTo(0, 0);
+	}, [location]);
+  
+	return <>{props.children}</>
+  };
+
+function App() {	  
 
   return (
     <div className="App">
     <Router>
+		<ScrollToTop>
 		<Header /> {/*Header está fora da rota, será fixo e disponível em todas as páginas*/}
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -22,6 +34,7 @@ function App() {
 				<Route path="/details/:id" element={<ProductDetail />} /> {/*Esse link recebe o ID do produto para compor a URL*/}
 			</Routes>
 			<Footer /> {/*Footer está fora da rota, será fixo e disponível em todas as páginas*/}
+		</ScrollToTop>
 		</Router>
     </div>
   )
