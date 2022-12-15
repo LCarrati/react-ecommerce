@@ -2,11 +2,12 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Wrapper, ProductsWrapper, ProductsMenuWrapper } from './styles'
 import { ListContext, prodList } from '../../products/productsContext'
 import Carrossel from '../carrossel'
+// import { useLocation } from 'react-router-dom'
 
-const Main = () => {
-
+const Main = ({category}) => {
   const { listRender, setListRender } = useContext(ListContext) //Chamando o contexto que carrega a lista de CARDs
   const [minMax, setMinMax] = useState([0, 0]) //Estado para filtrar a lista por preço
+
 
   const handleOrderChange = (event) => { //Ordenando a lista por preço
     event.target.value === 'Crescente' ? setListRender([...listRender].sort((a, b) => (a.props.price - b.props.price))) : setListRender([...listRender].sort((a, b) => (b.props.price - a.props.price)))
@@ -25,18 +26,48 @@ const Main = () => {
 
   useEffect(() => {
     if (minMax[0] > 0 && minMax[1] > 0) { //Se o valores de min e max forem diferentes de 0, filtrar a lista de CARDs pelo valor máx e mín
-      setListRender([...prodList].filter((produto) => ((produto.props.price >= minMax[0]) && (produto.props.price <= minMax[1]))
+      category !== undefined ? 
+      setListRender([...prodList].filter((produto) => ((produto.props.price >= minMax[0]) && (produto.props.price <= minMax[1]) && 
+     (produto.props.category).includes((category))
+      )
+      )) : setListRender([...prodList].filter((produto) => ((produto.props.price >= minMax[0]) && (produto.props.price <= minMax[1]))
       ))
     }
     if (minMax[0] == 0) { //Se o valor de min for 0, filtrar a lista de CARDs pelo valor máx
-      setListRender([...prodList].filter((produto) => ((produto.props.price) <= minMax[1])
-      ))
+      category !== undefined ?
+      setListRender([...prodList].filter((produto) => ((produto.props.price) <= minMax[1] && 
+      (produto.props.category).includes((category))
+      )
+      )) : setListRender([...prodList].filter((produto) => ((produto.props.price) <= minMax[1])))
     }
     if (minMax[1] == 0) { //Se o valor de max for 0, filtrar a lista de CARDs pelo valor mín
-      setListRender([...prodList].filter((produto) => ((produto.props.price) >= minMax[0])
-      ))
+      category !== undefined ?
+      setListRender([...prodList].filter((produto) => ((produto.props.price) >= minMax[0] && 
+      (produto.props.category).includes((category))
+      )
+      )) : setListRender([...prodList].filter((produto) => ((produto.props.price) >= minMax[0])))
     }
   }, [minMax]) //sempre que o estado minMax for alterado
+
+  // const location = useLocation()
+  // const cat  = location.state
+  
+  // useEffect(() =>{
+  //   if (cat !== null) {
+  //     setListRender([...prodList].filter((produto) => ((produto.props.category).includes((cat)))))
+  //   }
+  //   else {
+  //     setListRender(prodList)
+  //   }
+  // },[location])
+useEffect(()=>{
+  if (category !== undefined) {
+    setListRender([...prodList].filter((produto) => ((produto.props.category).includes((category)))))
+  }
+  else {
+    setListRender(prodList)
+  }
+},[category])
 
 
   return (<>

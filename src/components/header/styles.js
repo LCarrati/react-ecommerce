@@ -12,6 +12,9 @@ export const Container = styled.header`
     align-items: center;
     gap: 10px;
     width: 100%;
+    a {
+        all: unset;
+    }
 
     && img {
         height: 37px;
@@ -59,6 +62,9 @@ export const NavMenu = styled.nav`
         background-color: rgba(244, 244, 244, 0.1);
         box-shadow: 0px 3px 3px 0px rgb(20 20 20 / 20%);
         opacity: 1;
+    }
+    a {
+        all: unset;
     }
 `
 

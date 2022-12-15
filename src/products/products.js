@@ -23,7 +23,6 @@ export const Produtos = [
         id: 2,
         name: "Foguete Proton-M",
         image: [`${imgUrlPath[1]}proton_m.jpg`,`${imgUrlPath[1]}2.jpg`,`${imgUrlPath[1]}3.jpg`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete russo',
@@ -36,7 +35,6 @@ export const Produtos = [
         id: 3,
         name: "Foguete Angara",
         image: [`${imgUrlPath[2]}angara.jpg`,`${imgUrlPath[2]}2.jpg`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete russo',
@@ -49,7 +47,6 @@ export const Produtos = [
         id: 4,
         name: "Foguete Lm5",
         image: [`${imgUrlPath[3]}lm5.jpg`,`${imgUrlPath[3]}2.jpg`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete chinês',
@@ -62,7 +59,6 @@ export const Produtos = [
         id: 5,
         name: "Foguete Lm6",
         image: [`${imgUrlPath[4]}lm6.jpg`,`${imgUrlPath[4]}2.jpg`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete chinês',
@@ -75,7 +71,6 @@ export const Produtos = [
         id: 6,
         name: "Foguete Ares V",
         image: [`${imgUrlPath[5]}ares_v.jpg`,`${imgUrlPath[5]}2.jpg`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete americano',
@@ -88,7 +83,6 @@ export const Produtos = [
         id: 7,
         name: "Foguete Atlas V",
         image: [`${imgUrlPath[6]}atlas_v.jpg`,`${imgUrlPath[6]}2.jpg`,`${imgUrlPath[6]}3.jpg`,`${imgUrlPath[6]}4.jpg`,`${imgUrlPath[6]}5.png`],
-        // image: [imagem0,"src/assets/saturnoV.jpg","src/assets/osirisRex.jpg"],
         value: 10000.0,
         discount: 0,
         description: 'Foguete americano',
@@ -215,7 +209,7 @@ export const Produtos = [
         sku: 'telescopio-hubble',
         stock: 1,
         status: 'in-stock',
-        category: ['Telescópios']
+        category: ['Telescopios']
     },
     {
         id: 18,
@@ -227,7 +221,7 @@ export const Produtos = [
         sku: 'telescopio-james-webb',
         stock: 1,
         status: 'in-stock',
-        category: ['Telescópios']
+        category: ['Telescopios']
     },
     {
         id: 19,
@@ -239,7 +233,7 @@ export const Produtos = [
         sku: 'telescopio-kepler',
         stock: 1,
         status: 'in-stock',
-        category: ['Telescópios']
+        category: ['Telescopios']
     },
     {
         id: 20,
@@ -251,6 +245,6 @@ export const Produtos = [
         sku: 'telescopio-spitzer',
         stock: 1,
         status: 'in-stock',
-        category: ['Telescópios']
+        category: ['Telescopios']
     }
 ]

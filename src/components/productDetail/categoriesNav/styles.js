@@ -8,6 +8,10 @@ export const Wrapper = styled.section`
     border-bottom: 1px solid #90909021;
     box-shadow: 0px 1px 4px 0px rgb(137 137 137 / 12%);
     justify-content: space-around;
+    a {
+        all:unset;
+        cursor: pointer;
+    }
 `
 
 export const Container = styled.div`

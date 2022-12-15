@@ -6,13 +6,14 @@ import {
 	useLocation
 } from 'react-router-dom';
 import { useEffect } from 'react';
-import Home from './pages/home'
 import ProductDetail from './pages/productDetail'
 import PageCart from './pages/cart'
 import Header from './components/header';
 import Footer from './components/footer';
+import Category from './pages/category';
+import Main from './components/main';
 
-const ScrollToTop = (props) => { // peguei esse bloco na documentação 
+const ScrollToTop = (props) => { // peguei esse bloco na documentação, serve para scroll to top ao mudar a rota.
 	const location = useLocation();
 	useEffect(() => {
 	  window.scrollTo(0, 0);
@@ -25,16 +26,17 @@ function App() {
 
   return (
     <div className="App">
-    <Router>
-		<ScrollToTop>
-		<Header /> {/*Header está fora da rota, será fixo e disponível em todas as páginas*/}
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/cart/" element={<PageCart />} />
-				<Route path="/details/:id" element={<ProductDetail />} /> {/*Esse link recebe o ID do produto para compor a URL*/}
-			</Routes>
-			<Footer /> {/*Footer está fora da rota, será fixo e disponível em todas as páginas*/}
-		</ScrollToTop>
+    	<Router>
+			<ScrollToTop> {/*ScrollToTop está fora da rota, será fixo e disponível em todas as páginas*/}
+				<Header /> {/*Header está fora da rota, será fixo e disponível em todas as páginas*/}
+					<Routes>
+						<Route path="/" element={<Main />} />
+						<Route path="/cart/" element={<PageCart />} />
+						<Route path="/details/:id" element={<ProductDetail />} /> {/*Esse link recebe o ID do produto para compor a URL*/}
+						<Route path="/category/:cat" element={<Category />} /> {/*Esse link recebe a Categoria do produto para compor a URL*/}
+					</Routes>
+					<Footer /> {/*Footer está fora da rota, será fixo e disponível em todas as páginas*/}
+			</ScrollToTop>
 		</Router>
     </div>
   )
