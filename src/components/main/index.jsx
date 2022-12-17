@@ -75,12 +75,12 @@ useEffect(()=>{
       <Carrossel />
       <ProductsMenuWrapper>
         <p>Quantidade de produtos: {listRender.length}</p>
-        <p>Valor mínimo:
-          <input onChange={handlePriceMin}></input>
-          Valor máximo:
-          <input onChange={handlePriceMax}></input>
+        <p className='filtroValor'><span>Valor mínimo:&nbsp;&nbsp;
+          <input onChange={handlePriceMin}></input></span>
+          <span>Valor máximo:&nbsp;&nbsp;
+          <input onChange={handlePriceMax}></input></span>
         </p>
-        <p>Ordenar:
+        <p>Ordenar:&nbsp;&nbsp;
           <select onChange={handleOrderChange}>
             <option value="Decrescente">Decrescente</option>
             <option value="Crescente">Crescente</option>

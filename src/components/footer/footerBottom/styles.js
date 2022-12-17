@@ -8,7 +8,7 @@ export const Container = styled.section`
         display: flex;
         gap: 91px;
         margin: 0 auto;
-        width: 875px;
+        width: 975px;
         padding-top: 20px;
         justify-content: space-between;
         && div {

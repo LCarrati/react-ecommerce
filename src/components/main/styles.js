@@ -27,4 +27,8 @@ export const ProductsMenuWrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
+    && .filtroValor {
+        display: flex;
+        gap: 35px;
+    }
 `
