@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { CartContext } from '../../Reducer'
+import { AlertContext } from '../alertMessage/alertContext'
 import Button from '../button'
 import { Wrapper } from './styles'
 
 const ProductCard = ({name, image, price, discount, id}) => {
 
   const {setCart} = useContext(CartContext) //chamando o contexto que permite alterar o CART
-
+  const { setAlert, displayAlert } = useContext(AlertContext)
+ 
   const handleAddToCart = () => {
     setCart({
       type:'ADD',
@@ -16,6 +18,7 @@ const ProductCard = ({name, image, price, discount, id}) => {
         productPrice:price,
       }
     })
+    displayAlert()
   }
 
   return (

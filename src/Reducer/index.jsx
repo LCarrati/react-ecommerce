@@ -56,7 +56,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]); //sempre que houver alteração no CART, salvar essa alteração localmente
 
   return (
-    <CartContext.Provider value={{ cart, setCart}}> {/*disponibilizar cart e setCart para todos os Childern*/}
+    <CartContext.Provider value={{ cart, setCart}}> {/*disponibilizar cart e setCart para todos os Children*/}
       {children}
     </CartContext.Provider>
   );

@@ -32,4 +32,19 @@ export const Wrapper = styled.div`
         height: 65%;
         width: 100%;
     }
+    && .cartNumber {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #4caf50;
+        border-radius: 50%;
+        width: 18px;
+        height: 19px;
+        border: 1px solid white;
+        text-align: center;
+        font-size: 12px;
+    }
+    && .miniCartWrapper {
+       position: relative;
+    }
 `

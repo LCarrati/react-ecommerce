@@ -26,6 +26,9 @@ export const Wrapper = styled.div`
     && hr {
     margin: 10px 0;
     }
+    && .emptyCartMessage {
+        font-size:20px;
+    }
 
 `
 

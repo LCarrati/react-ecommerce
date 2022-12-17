@@ -41,7 +41,7 @@ const MiniCart = () => {
     <Wrapper>
         <h1>Carrinho:</h1>
         <hr />
-        {cart.map((item) => <CartItems amount={item.amount} key={item.productId} ProdInCartId={item.productId}/>)}
+        {cartTotally.length > 0 ? cart.map((item) => <CartItems amount={item.amount} key={item.productId} ProdInCartId={item.productId}/>) : <p className='emptyCartMessage'>Carinho vazio</p>}
         <hr />
         <div className='minicartTotalCheckout'><p>Total: {result}</p><Button label={'Finalizar compra'} /></div>
     </Wrapper>

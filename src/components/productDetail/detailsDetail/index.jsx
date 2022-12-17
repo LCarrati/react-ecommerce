@@ -1,9 +1,11 @@
 import React, {useContext} from 'react'
 import { Wrapper } from './styles'
 import { CartContext } from '../../../Reducer'
+import { AlertContext } from '../../alertMessage/alertContext'
 
 const DetailsDetail = ({name,price,id}) => {
   const {setCart} = useContext(CartContext)
+  const { setAlert, displayAlert } = useContext(AlertContext)
   const handleAddToCart = () => {
     setCart({
       type:'ADD',
@@ -12,6 +14,7 @@ const DetailsDetail = ({name,price,id}) => {
         productPrice:price,
       }
     })
+    displayAlert()
   }
 
   return (

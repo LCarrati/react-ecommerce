@@ -26,7 +26,7 @@ export const Container = styled.header`
         color: #fff;
     }
     && .headerLayout {
-        width: 1140px;
+        width: 1130px;
         display: flex;
         align-items: center;
         justify-content: space-between;
