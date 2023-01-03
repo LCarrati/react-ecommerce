@@ -1,6 +1,6 @@
 
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import CartHeader from './cartMenu'
 import SearchField from './search'
 import UserMenu from './userMenu/index.jsx'
@@ -10,6 +10,7 @@ import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { ListContext, prodList } from '../../products/productsContext'
 import { IoRocketOutline, IoPlanetOutline } from 'react-icons/io5'
 import { RiRadarLine, RiArrowDownSLine } from 'react-icons/ri'
+import { categoryNameContext } from './headerContext'
 
 
 const RocketMenu = () => {
@@ -41,6 +42,16 @@ const Header = () => {
 
   const location = useLocation()
   const cat  = location.state
+  const { categoryName, setCategoryName } = useContext(categoryNameContext)
+  
+  const alteraCategoria = (cat) => {
+    setCategoryName(cat)
+    console.log('alterei categoria loc '+cat)
+  } 
+  useEffect(() => {
+    alteraCategoria(cat)
+  }, [cat])
+  
 
   const handleChange = (event) => {
     cat !== null ?

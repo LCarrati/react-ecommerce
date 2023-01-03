@@ -27,9 +27,15 @@ export const Wrapper = styled.div`
         line-height: 20px;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
         font-weight: 400;
         color: #313131;
+    }
+    & .linkProductName{
+        height: 51px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     & .productPrice{
         font-size: 19px;

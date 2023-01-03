@@ -24,7 +24,7 @@ const ProductCard = ({name, image, price, discount, id}) => {
   return (
     <Wrapper>
         <Link to={`/details/${id}`}><img src={image[0]} alt="" /></Link>
-        <Link to={`/details/${id}`}><p className='productName'>{name}</p></Link>
+        <Link to={`/details/${id}`} className='linkProductName'><p className='productName'>{name}</p></Link>
         <p className='productPrice'>{(price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
         <p>até <span>12x</span> de <span>{(price/12).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span> sem juros</p>
         <hr />

@@ -12,6 +12,15 @@ export const Wrapper = styled.main`
     text-align: center;
     gap: 25px;
     max-width: 1140px;
+    && .categoryName {
+        font-size: 30px;
+        /* margin: 25px auto 0px; */
+        border-bottom: 5px dotted #ff6000;
+        width: 100%;
+        height: 70px;
+        padding-top: 12px;
+        background-color: aliceblue;
+    }
 `;
 
 export const ProductsWrapper = styled.div`

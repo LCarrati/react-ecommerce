@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Wrapper, ProductsWrapper, ProductsMenuWrapper } from './styles'
 import { ListContext, prodList } from '../../products/productsContext'
 import Carrossel from '../carrossel'
+import { categoryNameContext } from '../header/headerContext'
 // import { useLocation } from 'react-router-dom'
 
 const Main = ({category}) => {
@@ -69,10 +70,11 @@ useEffect(()=>{
   }
 },[category])
 
+const { categoryName } = useContext(categoryNameContext)
 
   return (<>
     <Wrapper>
-      <Carrossel />
+      {categoryName !== null ? <p className='categoryName'>{categoryName}</p> : <Carrossel />}
       <ProductsMenuWrapper>
         <p>Quantidade de produtos: {listRender.length}</p>
         <p className='filtroValor'><span>Valor mínimo:&nbsp;&nbsp;
