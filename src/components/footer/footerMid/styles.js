@@ -29,6 +29,7 @@ export const Container = styled.section`
     }
     && .subtitle {
         font-weight: bold;
+        color: #012f52;
     }
     && .socialIconsDiv{
         display: flex;
@@ -39,5 +40,12 @@ export const Container = styled.section`
             &:hover {
                 color:#062f4f;
             }
+    }
+    && a{
+        text-decoration: none;
+        color: white;
+    }
+    && a:hover {
+        color: #062f4f;
     }
 `

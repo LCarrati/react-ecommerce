@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <CartProvider> {/*Adicionar, remover e consultar o carrinho disponível para todos os componentes*/}
     <ListProvider> {/*Lista de produtos disponível para ser filtrada por todos os componentes*/}
     <CategoryNameProvider> {/*Disponibiliza o nome da categoria globalmente para renderização condicional*/}
-    <AlertProvider>
+    <AlertProvider> {/*Disponibiliza o alerta de adicionar ao carrinho para todos os componentes*/}
       <App />
     </AlertProvider>
     </CategoryNameProvider>

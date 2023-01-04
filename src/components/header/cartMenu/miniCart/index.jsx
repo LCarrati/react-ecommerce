@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Wrapper, CartItemsWrapper } from './styles'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Produtos } from '../../../../products/products'
 
 import { CartContext } from '../../../../Reducer'
@@ -43,7 +43,7 @@ const MiniCart = () => {
         <hr />
         {cartTotally.length > 0 ? cart.map((item) => <CartItems amount={item.amount} key={item.productId} ProdInCartId={item.productId}/>) : <p className='emptyCartMessage'>Carinho vazio</p>}
         <hr />
-        <div className='minicartTotalCheckout'><p>Total: {result}</p><Button label={'Finalizar compra'} /></div>
+        <div className='minicartTotalCheckout'><p>Total: {result}</p><Link to={'/emconstrucao'} className='linkFinalizarBotao'><Button label={'Finalizar compra'} /></Link></div>
     </Wrapper>
   )
 }

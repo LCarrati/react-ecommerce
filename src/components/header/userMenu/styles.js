@@ -16,4 +16,8 @@ export const Wrapper = styled.div`
         height: 65%;
         /* width: 100%; */
     }
+    && a{
+        display: flex;
+        gap: 5px;
+    }
 `

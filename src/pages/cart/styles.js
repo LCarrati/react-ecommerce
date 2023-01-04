@@ -36,6 +36,9 @@ export const Wrapper = styled.main`
             color: #666666;
         }
     }
+    && a{
+        text-decoration: none;
+    }
 
 `
 

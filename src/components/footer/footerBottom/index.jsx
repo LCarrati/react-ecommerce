@@ -18,9 +18,8 @@ const FooterBottom = () => {
           </div>
           <div>
             <h4 className='littleMargin'>Documentação</h4>
-            <p>Acessar GitHub do projeto</p>
-            <p>Acessar Documentação</p>
-            <p>Entrar em contato</p>
+            <p><a href="http://github.com/LCarrati/react-ecommerce"  target="_blank">Acessar GitHub do projeto</a></p>
+            <p><a href="http://www.linkedin.com/in/leonardo-carrati"  target="_blank">Entrar em contato</a></p>
           </div>
         </div>
     </Container>

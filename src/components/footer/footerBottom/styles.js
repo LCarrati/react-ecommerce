@@ -31,5 +31,13 @@ export const Container = styled.section`
     }
     && span{
         font-weight: bold;
+        color: #ff6000;
+    }
+    && a{
+        text-decoration: none;
+        color: #ff6000;
+    }
+    && a:hover {
+            color: white;
     }
 `

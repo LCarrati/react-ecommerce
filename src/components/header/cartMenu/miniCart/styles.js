@@ -29,6 +29,10 @@ export const Wrapper = styled.div`
     && .emptyCartMessage {
         font-size:20px;
     }
+    && .linkFinalizarBotao:hover{
+        height: 43px;
+        width: fit-content;
+    }
 
 `
 

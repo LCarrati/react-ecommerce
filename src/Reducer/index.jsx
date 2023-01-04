@@ -24,18 +24,19 @@ const cartReducer = (state, action) => { //Função que altera o estado do CART
         ]
       }
 
-      if(itemExist) {
+      if (itemExist) {
         return state.map((item) => item.productId == payloadId
-        ? { ...item, amount: Number(item.amount)+1 }
-        : item)
+          ? { ...item, amount: Number(item.amount) + 1 }
+          : item)
       }
 
-    case 'REMOVE': 
-      if(itemExistAndAmount){
-      return state.map((item) => item.productId == payloadId && (item.amount >= 1)
-      ? { ...item, amount: Number(item.amount)-1 }
-      : item)}
-      if(!itemExistAndAmount){
+    case 'REMOVE':
+      if (itemExistAndAmount) {
+        return state.map((item) => item.productId == payloadId && (item.amount >= 1)
+          ? { ...item, amount: Number(item.amount) - 1 }
+          : item)
+      }
+      if (!itemExistAndAmount) {
         const filtrado = state.filter((item) => item.productId != payloadId)
         return filtrado
       }
@@ -46,7 +47,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 
-  const initializer = (cartInitialValue) => JSON.parse(localStorage.getItem("localCart")) || cartInitialValue; 
+  const initializer = (cartInitialValue) => JSON.parse(localStorage.getItem("localCart")) || cartInitialValue;
   //Ao acessar o CART a primeira vez, se existir um CART salvo localmente então esse será o valor inicial, caso contrário usar o cartInitialValue que é um array vazio.
 
   const [cart, setCart] = useReducer(cartReducer, cartInitialValue, initializer); //cartReducer é a função que altera o estado, cartInitialValue é o valor inicial do estado e initializer é a verificação executava antes de definir o estado inicial 
@@ -56,7 +57,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]); //sempre que houver alteração no CART, salvar essa alteração localmente
 
   return (
-    <CartContext.Provider value={{ cart, setCart}}> {/*disponibilizar cart e setCart para todos os Children*/}
+    <CartContext.Provider value={{ cart, setCart }}> {/*disponibilizar cart e setCart para todos os Children*/}
       {children}
     </CartContext.Provider>
   );

@@ -26,7 +26,7 @@ export const Wrapper = styled.main`
 export const ProductsWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     gap: 16px;
     flex-wrap: wrap;
 `;
@@ -36,8 +36,15 @@ export const ProductsMenuWrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
+    font-size: 16px;
     && .filtroValor {
         display: flex;
         gap: 35px;
+    }
+    && input{
+        padding-left: 3px;
+    }
+    && .alinhaFiltro{
+        display: flex;
     }
 `

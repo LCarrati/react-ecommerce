@@ -15,4 +15,7 @@ export const Container = styled.section`
     && .githubIcon:hover {
         transform: rotate(720deg) scale(1.8);
     }
+    && a{
+        color: inherit;
+    }
 `

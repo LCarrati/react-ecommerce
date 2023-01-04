@@ -77,9 +77,9 @@ const { categoryName } = useContext(categoryNameContext)
       {categoryName !== null ? <p className='categoryName'>{categoryName}</p> : <Carrossel />}
       <ProductsMenuWrapper>
         <p>Quantidade de produtos: {listRender.length}</p>
-        <p className='filtroValor'><span>Valor mínimo:&nbsp;&nbsp;
+        <p className='filtroValor'><span className='alinhaFiltro'>Valor mínimo:&nbsp;&nbsp;
           <input onChange={handlePriceMin}></input></span>
-          <span>Valor máximo:&nbsp;&nbsp;
+          <span className='alinhaFiltro'>Valor máximo:&nbsp;&nbsp;
           <input onChange={handlePriceMax}></input></span>
         </p>
         <p>Ordenar:&nbsp;&nbsp;
