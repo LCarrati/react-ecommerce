@@ -50,17 +50,6 @@ const Main = ({category}) => {
     }
   }, [minMax]) //sempre que o estado minMax for alterado
 
-  // const location = useLocation()
-  // const cat  = location.state
-  
-  // useEffect(() =>{
-  //   if (cat !== null) {
-  //     setListRender([...prodList].filter((produto) => ((produto.props.category).includes((cat)))))
-  //   }
-  //   else {
-  //     setListRender(prodList)
-  //   }
-  // },[location])
 useEffect(()=>{
   if (category !== undefined) {
     setListRender([...prodList].filter((produto) => ((produto.props.category).includes((category)))))
