@@ -1,3 +1,5 @@
+// aqui é a lógica do carrinho de compras, feita com useReducer. 
+
 import React, { createContext, useReducer, useEffect } from 'react'
 
 const cartInitialValue = []; //Carrinho inicial vazio
@@ -50,7 +52,7 @@ export const CartProvider = ({ children }) => {
   const initializer = (cartInitialValue) => JSON.parse(localStorage.getItem("localCart")) || cartInitialValue;
   //Ao acessar o CART a primeira vez, se existir um CART salvo localmente então esse será o valor inicial, caso contrário usar o cartInitialValue que é um array vazio.
 
-  const [cart, setCart] = useReducer(cartReducer, cartInitialValue, initializer); //cartReducer é a função que altera o estado, cartInitialValue é o valor inicial do estado e initializer é a verificação executava antes de definir o estado inicial 
+  const [cart, setCart] = useReducer(cartReducer, cartInitialValue, initializer); //cartReducer é a função que altera o estado, cartInitialValue é o valor inicial do estado e initializer é a verificação executada antes de definir o estado inicial 
 
   useEffect(() => {
     localStorage.setItem("localCart", JSON.stringify(cart));

@@ -9,18 +9,18 @@ import FooterBottom from './footerBottom'
 import FooterCredits from './footerCredits'
 
 const Footer = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const { setListRender } = useContext(ListContext)
+  // const { setListRender } = useContext(ListContext)
 
-  const handleChange = (event) => {
-    setListRender([...prodList].filter((produto) => ((produto.props.name.toUpperCase()).includes((event.target.value.toUpperCase())))))
-  }
+  // const handleChange = (event) => {
+  //   setListRender([...prodList].filter((produto) => ((produto.props.name.toUpperCase()).includes((event.target.value.toUpperCase())))))
+  // }
 
   return (
     <>
     <Container>
-      <p>Mensagem aletoria</p>
+      <p>Lorem ipsun</p>
     </Container>
     <FooterMid />
     <FooterBottom />

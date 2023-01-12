@@ -1,5 +1,5 @@
 import {
-	// BrowserRouter as Router, //GH_PAGES DO NOT SUPPORT IT
+	// BrowserRouter as Router, //GH_PAGES DO NOT SUPPORT IT (mudar para HashRouter)
 	HashRouter as Router,
 	Routes,
 	Route,
@@ -14,7 +14,7 @@ import Category from './pages/category';
 import Main from './components/main';
 import NotFound from './pages/404';
 
-const ScrollToTop = (props) => { // peguei esse bloco na documentação do ReactRouter, serve para scroll to top ao mudar a rota.
+const ScrollToTop = (props) => { // peguei esse bloco na documentação do ReactRouter, serve para 'scroll to top' ao mudar a rota.
 	const location = useLocation();
 	useEffect(() => {
 		window.scrollTo(0, 0);
